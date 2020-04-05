@@ -1,0 +1,11 @@
+def has_cycle(head):
+    node_set = set()
+    while head!=None:
+        if head not in node_set:
+            node_set.add(head)
+            head = head.next
+
+        else:
+            return True
+    return False
+
